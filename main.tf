@@ -34,4 +34,10 @@ resource "aws_subnet" "mysubnet" {
   }
 }
 
+resource "mysql_user" "app_user" {
+  user               = "app_service"
+  host               = "%"
+  db_password = "password123!DBpass"   # <-- oops
+}
+
 
