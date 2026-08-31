@@ -37,6 +37,7 @@ resource "aws_subnet" "mysubnet" {
 resource "mysql_user" "app_user" {
   user               = "app_service"
   host               = "%"
+  mysql_password = "password123!MYSQL"
 }
 
 
